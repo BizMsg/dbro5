@@ -1,5 +1,5 @@
 ---
-description: Ufit 서비스 내 ㅁㅁㅁㅁ
+description: Ufit 서비스 (dbro5)
 ---
 
 # 개요
