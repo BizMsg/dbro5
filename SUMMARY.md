@@ -1,6 +1,6 @@
 # Table of contents
 
-* [개요](README.md)
+* [UFIT DBRO 소개](README.md)
 * [사전 준비](undefined.md)
 
 ## DBRO 설치
