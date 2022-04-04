@@ -1,2 +1,31 @@
+---
+description: 발송쿼리
+---
+
 # MMS
+
+텍스트 2000byte 이하, 이미지 60kb 이하 등 멀티미디어를 같이 보내는 메시지
+
+
+
+**TXT**
+
+```sql
+INSERT INTO EM_TRAN_MMS
+(FILE_CNT, MMS_BODY, MMS_SUBJECT) VALUES (1, ‘본문 내용’, ‘메시지 제목’);
+INSERT INTO EM_TRAN
+(TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
+VALUES (‘01000000000’, ‘01000000000’, ‘1’, NOW(), 6, {EM_TRAN_MMS 의 MMS_SEQ 값})
+```
+
+**IMG + TXT**
+
+```sql
+INSERT INTO EM_TRAN_MMS (FILE_CNT, MMS_BODY, MMS_SUBJECT, FILE_NAME1) 
+VALUES (1, ‘본문 내용’, ‘메시지 제목’, ‘D:/spool/mms.jpg’);
+
+INSERT INTO EM_TRAN(TRAN_PHONE, TRAN_CALLBACK, 
+TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
+VALUES (‘01000000000’, ‘01000000000’, ‘1’, NOW(), 6, {EM_TRAN_MMS 의 MMS_SEQ 값});
+```
 
