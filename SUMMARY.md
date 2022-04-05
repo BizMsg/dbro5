@@ -23,3 +23,4 @@
   * [대체 발송 시나리오](undefined-2/undefined-1.md)
 * [발송 결과 코드](undefined-3/README.md)
   * [공통](undefined-3/undefined.md)
+  * [SMS/MMS](undefined-3/sms-mms.md)
