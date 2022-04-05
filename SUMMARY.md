@@ -24,3 +24,4 @@
 * [발송 결과 코드](undefined-3/README.md)
   * [공통](undefined-3/undefined.md)
   * [SMS/MMS](undefined-3/sms-mms.md)
+  * [카카오 비즈 메시지](undefined-3/undefined-1.md)
