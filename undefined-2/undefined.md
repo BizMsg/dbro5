@@ -293,8 +293,8 @@ VALUES (
 
 | 버튼 타입 |  타입 |        속성       |  타입  |  필수 |                                 설명                                 |
 | :---: | :-: | :-------------: | :--: | :-: | :----------------------------------------------------------------: |
-|  웹 링  |  WL |   url\_mobile   | text |  Y  |                  버튼 클릭 시 이동할 pc/mobile환경별 Web URL                  |
-|  웹 링  |  WL |     url\_pc     | text |  N  |                  버튼 클릭 시 이동할 pc/mobile환경별 Web URL                  |
+|  웹 링크 |  WL |   url\_mobile   | text |  Y  |                  버튼 클릭 시 이동할 pc/mobile환경별 Web URL                  |
+|  웹 링크 |  WL |     url\_pc     | text |  N  |                  버튼 클릭 시 이동할 pc/mobile환경별 Web URL                  |
 |  앱 링크 |  AL |   scheme\_ios   | text |  Y  |             버튼 클릭 시 실행할 OS 별 Application Custom Scheme             |
 |  앱 링크 |  AL | scheme\_android | text |  Y  |             버튼 클릭 시 실행할 OS 별 Application Custom Scheme             |
 |  앱 링크 |  AL |   url\_mobile   | text |  -  |                     Mobile 환경에서 버튼 클릭 시 이동할 url                    |
@@ -316,3 +316,90 @@ VALUES (
 
 
 
+
+
+### **AT + 바로연결**
+
+
+
+알림톡 바로연결이란?
+
+* 알림톡 하단에 가로 슬라이드 형태로 표시되며 웹/앱 연결, 상담톡 전환 등을 호출하는 기능&#x20;
+* 상담톡 또는 챗봇을 사용하는 발신프로필만 이용 가능
+* 바로연결은 최대 10개까지 사용 가능, 사용 시 버튼 개수는 2개로 제한 \
+  ****(챗봇, 상담톡 사용 채널에만 한해 사용 가능합니다.)
+
+
+
+**AT + 바로연결 타입별 속성**
+
+|  타입 |        속성       |  타입  |  필수 |                      설명                      |
+| :-: | :-------------: | :--: | :-: | :------------------------------------------: |
+|  WL |   url\_mobile   | text |  Y  |      바로연결 클릭 시 이동할 pc/mobile 환경별 web url     |
+|  WL |     url\_pc     | text |  N  |      바로연결 클릭 시 이동할 pc/mobile 환경별 web url     |
+|  AL |   scheme\_ios   | text |  -  | 바로연결 클릭 시 실행할 OS 별 Application Custom Scheme |
+|  AL | scheme\_android | text |  -  | 바로연결 클릭 시 실행할 OS 별 Application Custom Scheme |
+|  AL |   url\_mobile   | text |  -  |         mobile 환경에서 바로연결 클릭 시 이동할 url        |
+|  AL |     url\_pc     | text |  N  |           pc 환경에서 바로연결 클릭 시 이동할 url          |
+|  BK |        -        |   -  |  -  |                해당 바로연결 텍스트 전송                |
+|  MD |        -        |   -  |  -  |             해당 바로연결 텍스트+메시지 본문 전송            |
+|  BC |   chat\_extra   | text |  N  |               상담톡 전환 시 전달할 메타정보              |
+|  BT |   chat\_extra   | text |  N  |                봇 전환 시 전달할 메타정보               |
+|  BT |   chat\_event   | text |  N  |               봇 전환 시 연결할 봇 이벤트명              |
+
+**바로연결 첨부파일 예시**
+
+**add\_info1.json**&#x20;
+
+만들
+
+****
+
+**add\_info2.json**
+
+```json5
+{
+  "button": [
+    {
+      "name": "비즈뿌리오 바로가기",
+      "type": "WL",
+      "url_mobile": "https://www.bizppurio.com/"
+    }
+  ],
+  "extra": {
+    "supplement": {
+      "quick_reply": [
+        {
+          "name": "비즈뿌리오",
+          "type": "WL",
+          "url_mobile": "https://www.bizppurio.com/"
+        },
+        {
+          "type": "BK"
+        },
+        {
+          "name": "메시지전달하기",
+          "type": "MD"
+        },
+        {
+          "name": "상담톡전환",
+          "type": "BC"
+        }
+      ]
+    }
+  }
+}
+
+```
+
+
+
+### AT + 이미지, 아이템 리스트
+
+**이미지와 구조화된 목록이 포함된 알림톡**
+
+* 기존 텍스트 알림톡 기본형에 (이미지 / 헤더 / 아이템 하이라이트 / 아이템리스트 / 아이템 요약정보) 5가지 항목이 추가로 구성
+* 이미지, 헤더, 아이템 하이라이트 영역을 필요에 따라 1 개 이상 필수 선택하여 템플릿 등록&#x20;
+* 템플릿 당 고정된 이미지만 사용 가능
+* 아이템리스트는 최소 2개 이상 최대 10개 항목으로 구성 가능 \
+  (알림톡 템플릿 강조 유형이 이미지형(IMAGE) 인 경우에만 **msg\_type** 을 **ai** 로 설정해주셔야 발송 가능합니다.) (ex. 알림톡 템플릿 강조 유형이 아이템리스트형이고 이미지가 포함된경우 **msg\_type** 을 **ai** 로 설정시 발송 실패)
