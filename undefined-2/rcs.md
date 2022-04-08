@@ -141,3 +141,67 @@ URL 예시 – maapfile://BR.i6dOpSm8N8.20200302150000.001
 | title | description | button name |
 | :---: | :---------: | :---------: |
 |   13  |      14     |      13     |
+
+
+
+줄 수 (Media 없는 경우, RCS A2P 단말 기준)
+
+|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
+| -------------------- | :---: | :---: | :---: |
+| description only     |   28  |   26  |   23  |
+| 타이틀 1줄 + description |   27  |   25  |   23  |
+| 타이틀 2줄 + description |   26  |   23  |   21  |
+| 타이틀 3줄 + description |   24  |   22  |   20  |
+
+
+
+줄 수 (Media Medium  경우, RCS A2P 단말 기준)
+
+|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
+| -------------------- | :---: | :---: | :---: |
+| description only     |   17  |   15  |   13  |
+| 타이틀 1줄 + description |   16  |   14  |   12  |
+| 타이틀 2줄 + description |   15  |   13  |   11  |
+| 타이틀 3줄 + description |   14  |   12  |   10  |
+
+
+
+**MMS (Carousel Medium - 슬라이드 형)**
+
+글자 수
+
+| title | description | button name |
+| :---: | :---------: | :---------: |
+|   5   |      6      |      5      |
+
+
+
+줄 수 (Media Short 인 경우, RCS A2P 단말 기준)
+
+
+
+|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
+| -------------------- | :---: | :---: | :---: |
+| description only     |   20  |   18  |   16  |
+| 타이틀 1줄 + description |   19  |   17  |   15  |
+| 타이틀 2줄 + description |   18  |   16  |   14  |
+| 타이틀 3줄 + description |   17  |   15  |   13  |
+| 타이틀 4줄 + description |   16  |   14  |   12  |
+| 타이틀 5줄 + description |   15  |   13  |   11  |
+
+
+
+### RCS + BUTTONS
+
+RCS 에 버튼 링크를 추가하고자 할 경우 아래와 같은 JSON 형식에 맞춰 RCS 테이블(BIZ\_RCS)의 **BUTTONS** 필드에 입력합니다.
+
+```sql
+INSERT INTO EM_TRAN_RCS(
+CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, BUTTONS)
+VALUES ({챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”안녕하세요”}’, ‘{버튼 예시 참조}’);
+
+INSERT INTO EM_TRAN(
+TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
+VALUES (‘01000000000’, ‘01000000000’, ‘1’, NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ 값});
+```
+

@@ -19,7 +19,6 @@
   * [MMS](undefined-2/mms.md)
   * [카카오 비즈 메시지](undefined-2/undefined.md)
   * [RCS](undefined-2/rcs.md)
-  * [FAX](undefined-2/fax.md)
   * [대체 발송 시나리오](undefined-2/undefined-1.md)
 * [발송 결과 코드](undefined-3/README.md)
   * [공통](undefined-3/undefined.md)
