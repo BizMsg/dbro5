@@ -347,43 +347,77 @@ VALUES (
 |  BT |   chat\_extra   | text |  N  |                봇 전환 시 전달할 메타정보               |
 |  BT |   chat\_event   | text |  N  |               봇 전환 시 연결할 봇 이벤트명              |
 
+****
+
 **바로연결 첨부파일 예시**
+
+알림톡 본문 하단에 바로연결 표기 내용을 add\_info1\~2.json 파일에 아래 내용을 추가합니다.
 
 **add\_info1.json**&#x20;
 
-만들
+버튼이 없고, 알림톡 바로연결 (웹링크/봇키워드/메시지전달/상담톡전환)이 있는 템플릿의 경우
 
-****
+```json
+{
+  "expansion": {
+    "supplement": {
+      "quick_reply": [
+        {
+          "type": "WL",
+          "name": "비즈뿌리오",
+          "url_mobile": "https://www.bizppurio.com/"
+        },
+        {
+          "type": "BK",
+          "name": "봇키워드하기"
+        },
+        {
+          "type": "MD",
+          "name": "메시지전달하기"
+        },
+        {
+          "type": "BC",
+          "name": "상담톡전환"
+        }
+      ]
+    }
+  }
+}
+
+```
 
 **add\_info2.json**
+
+버튼이 있고, **** 알림톡 바로연결 (웹링크/봇키워드/메시지전달/상담톡전환)이 있는 템플릿의 경우
 
 ```json5
 {
   "button": [
     {
-      "name": "비즈뿌리오 바로가기",
       "type": "WL",
+      "name": "비즈뿌리오 바로가기",
       "url_mobile": "https://www.bizppurio.com/"
     }
   ],
-  "extra": {
+  "expansion": {
     "supplement": {
       "quick_reply": [
         {
-          "name": "비즈뿌리오",
           "type": "WL",
+          "name": "비즈뿌리오",
           "url_mobile": "https://www.bizppurio.com/"
         },
         {
-          "type": "BK"
+          "type": "BK",
+          "name": "봇키워드하기"
         },
         {
-          "name": "메시지전달하기",
-          "type": "MD"
+          "type": "MD",
+          "name": "메시지전달하기"
         },
         {
-          "name": "상담톡전환",
-          "type": "BC"
+          "type": "BC",
+          "name": "상담톡전환"
         }
       ]
     }
@@ -403,3 +437,123 @@ VALUES (
 * 템플릿 당 고정된 이미지만 사용 가능
 * 아이템리스트는 최소 2개 이상 최대 10개 항목으로 구성 가능 \
   (알림톡 템플릿 강조 유형이 이미지형(IMAGE) 인 경우에만 **msg\_type** 을 **ai** 로 설정해주셔야 발송 가능합니다.) (ex. 알림톡 템플릿 강조 유형이 아이템리스트형이고 이미지가 포함된경우 **msg\_type** 을 **ai** 로 설정시 발송 실패)
+
+
+
+템플릿 강조 유형이 이미지 형인 템플릿의 경우
+
+**add\_info1.json**
+
+```json5
+{
+  "expansion": {
+    "msg_type": "ai"
+  }
+}
+```
+
+템플릿 강조 유형이 아이템리스트 형이고 헤더, 아이템리스트, 아이템 요약정보를 포함한 템플릿의 경우
+
+**add\_info2.json**
+
+```json5
+{
+  "items": {
+    "list": [
+      {
+        "title": "가입일자",
+        "description": "2021.5.23"
+      },
+      {
+        "title": "이름",
+        "description": "김카카오"
+      }
+    ],
+    "summary": {
+      "title": "구매가격",
+      "description": "18,000 원"
+    },
+    "expansion": {
+      "header": "카카오 가입을 환영합니다."
+    }
+  }
+}
+
+```
+
+
+
+### FT + 이미지
+
+이미지 포함하여 친구톡 발송 시 카카오에 등록된 이미지의 유형(일반/와이드)에 따라 add\_info.json 파일을 생성하여 등록합니다.
+
+
+
+일반 유형의 이미지 경우
+
+**add\_info1.json**
+
+```json5
+{
+  "image": {
+    "img_url": "http://mud-kage.kakao.com/dn/bYNiOa/btqBqjiQxoK/4IDZksnFEuBdU6zk9UBRKK/img.jpg",
+    "img_link": "http://www.daou.co.kr"
+  }
+}
+```
+
+와이드 유형의 이미지 경우
+
+**add\_info2.json**
+
+```json5
+{
+  "image": {
+    "img_url": "http://mud-kage.kakao.com/dn/bYNiOa/btqBqjiQxoK/4IDZksnFEuBdU6zk9UBRKK/img.jpg",
+    "img_link": "http://www.daou.co.kr"
+  },
+  "expansion": {
+    "wide": "y"
+  }
+}
+/
+```
+
+
+
+### AT/FT/BI + 대체(SMS/MMS) 발송
+
+알림톡/친구톡/브랜드톡은 전송결과에 대해 실패가 발생할 경우, **대체발송이 가능합니다.**
+
+단, 해당 서비스 아이디에 대해 **대체발송 가능여부와 주체**에 대한 설정이 되어있어야 합니다. \
+대체발송의 경우, EM\_TRAN 테이블에 해당 레코드가 추가로 생성되며 **SMS** 의 **TRAN\_TYPE** 은 **1** 이며 **MMS** 의 **TRAN\_TYPE** 은 **2** 이며, **TRAN\_ETC4** 에 **입력된 값이 실제 원본데이터의 TRAN\_PR 입니다**
+
+
+
+**AT+SMS**
+
+```sql
+INSERT INTO EM_TRAN_KKO(
+SENDER_KEY, TEMPLATE_CODE, NATION_CODE, MESSAGE, RE_TYPE, RE_BODY)
+VALUES ({발신 프로필 키}, {템플릿 코드}, '82', 'AT+SMS 대체발송', 'SMS', '대체발송'); 
+
+INSERT INTO EM_TRAN(
+TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
+VALUES ('01000000000', '01000000000', '1', now(), 7, {EM_TRAN_KKO 의 KKO_SEQ});
+```
+
+**AT+MMS**
+
+```sql
+INSERT INTO EM_TRAN_KKO (
+SENDER_KEY, TEMPLATE_CODE, NATION_CODE, MESSAGE, RE_TYPE, RE_BODY, ATTACHED_FILE_1)
+VALUES (
+{발신 프로필 키}, {템플릿 코드}, '82', 'AT+MMS 대체발송', 'MMS', '대체발송', ‘D:/spool/mms.jpg’);
+
+INSERT INTO EM_TRAN(
+TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
+VALUES ('01000000000', '01000000000', '1', now(), 7, {EM_TRAN_KKO 의 KKO_SEQ});
+```
+
+
+
