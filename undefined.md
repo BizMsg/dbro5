@@ -8,7 +8,7 @@ DBRO 는 Java 기반으로 실행되는 프로그램으로 Java(JVM)가 설치 �
 * Unix
 * Windows
 
-DB
+**DB**
 
 * MySQL
 * Oracle

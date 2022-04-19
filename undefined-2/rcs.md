@@ -205,3 +205,90 @@ TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
 VALUES (‘01000000000’, ‘01000000000’, ‘1’, NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ 값});
 ```
 
+
+
+### RCS + 1차 대체 발송
+
+RCS 는 전송결과에 대해 실패가 발생할 경우, 대체발송이 가능합니다.
+
+단, 해당 서비스 아이디에 대해 대체발송 가능여부와 주체에 대한 설정이 되어있어야 합니다. \
+대체발송의 경우, EM\_TRAN 테이블에 해당 레코드가 추가로 생성되며 SMS 의 TRAN\_TYPE 은 1 이고 MMS 의 TRAN\_TYPE 은 2 이며, TRAN\_ETC4 에 입력된 값이 실제 원본데이터의 TRAN\_PR 입니다.
+
+
+
+#### **RCS+SMS**
+
+```sql
+INSERT INTO EM_TRAN_RCS(
+CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, RE_TYPE, RE_BODY)
+VALUES (
+{챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”RCS+SMS 대체발송”}’ 'SMS', '대체발송');
+
+INSERT INTO EM_TRAN(
+TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
+VALUES (
+'01000000000', '01000000000', '1', now(), 11, {EM_TRAN_RCS 의 RCS_SEQ});
+```
+
+
+
+**RCS + MMS**
+
+```sql
+INSERT INTO EM_TRAN_KKO(
+CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, RE_TYPE, RE_BODY) 
+VALUES (
+{챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”RCS+MMS 대체발송”}’,
+'MMS', '대체발송', ‘D:/spool/mms.jpg’); 
+
+INSERT INTO EM_TRAN(
+TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
+VALUES ('01000000000', '01000000000', '1', now(), 11, {EM_TRAN_RCS 의 RCS_SEQ});
+```
+
+
+
+### RCS + 1차 + 2차 대체발송
+
+RCS 는 전송결과에 대해 실패가 발생할 경우, 최대 2 차 대체발송이 가능합니다. - 대체발송의 경우, EM\_TRAN 테이블에 해당 레코드가 추가로 됩니다.
+
+* 발송에 사용되는 RCS\_SEQ 값과 KKO\_SEQ 값은 동일해야 합니다.
+* 2 차 대체(SMS/MMS)의 정보는 KKO 테이블에 입력해야 정상적으로 발송됩니다.
+
+
+
+**RCS + AT + SMS**
+
+```sql
+INSERT INTO EM_TRAN_RCS(
+RCS_SEQ, CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, RE_TYPE) 
+VALUES ({RCS_SEQ}, {챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”RCS 메시지”}’, 'K');
+
+INSERT INTO EM_TRAN_KKO(
+KKO_SEQ, SENDER_KEY, TEMPLATE_CODE, NATION_CODE, MESSAGE, RE_TYPE, RE_BODY) 
+VALUES ({RCS_SEQ 동일}, {발신 프로필 키}, {템플릿 코드}, '82', 'RCS+AT+SMS 대체발송',
+'SMS’, ‘SMS 2 차 대체발송 메시지’); 
+
+INSERT INTO EM_TRAN(
+TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
+VALUES ('01000000000', '01000000000', '1', now(), 11, {EM_TRAN_RCS 의 RCS_SEQ});
+```
+
+
+
+**RCS + AT + MMS**
+
+```sql
+INSERT INTO EM_TRAN_RCS(
+RCS_SEQ, CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, RE_TYPE) 
+VALUES ({RCS_SEQ}, {챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”RCS 메시지”}’, 'K');
+
+INSERT INTO EM_TRAN_KKO(
+KKO_SEQ, SENDER_KEY, TEMPLATE_CODE, NATION_CODE, MESSAGE, RE_TYPE, RE_BODY) 
+VALUES ({RCS_SEQ 동일}, {발신 프로필 키}, {템플릿 코드}, '82', 'RCS+AT+MMS 대체발송',
+'MMS’, ‘MMS 2 차 대체발송 메시지’); 
+
+INSERT INTO EM_TRAN(
+TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
+VALUES ('01000000000', '01000000000', '1', now(), 11, {EM_TRAN_RCS 의 RCS_SEQ});
+```
