@@ -1,7 +1,7 @@
 # Table of contents
 
 * [UFIT DBRO 소개](README.md)
-* [사전 준비](undefined.md)
+* [사전 준비](prepare.md)
 
 ## DBRO 설치
 
@@ -10,18 +10,18 @@
 
 ## 참고사항
 
-* [Table Schema](undefined-1/table-schema.md)
+* [Table Schema](undefined/table-schema.md)
 
 ***
 
-* [메시지 발송](undefined-2/README.md)
-  * [SMS](undefined-2/sms.md)
-  * [MMS](undefined-2/mms.md)
-  * [카카오 비즈 메시지](undefined-2/undefined.md)
-  * [RCS](undefined-2/rcs.md)
-  * [대체 발송 시나리오](undefined-2/undefined-1.md)
-* [발송 결과 코드](undefined-3/README.md)
-  * [공통](undefined-3/undefined.md)
-  * [SMS/MMS](undefined-3/sms-mms.md)
-  * [카카오 비즈 메시지](undefined-3/undefined-1.md)
-  * [RCS](undefined-3/rcs.md)
+* [메시지 발송](dispatch/README.md)
+  * [SMS](dispatch/sms.md)
+  * [MMS](dispatch/mms.md)
+  * [카카오 비즈 메시지](dispatch/kakao-biz.md)
+  * [RCS](dispatch/rcs.md)
+  * [대체 발송 시나리오](dispatch/cases.md)
+* [발송 결과 코드](result-code/README.md)
+  * [공통](result-code/common.md)
+  * [SMS/MMS](result-code/sms-mms.md)
+  * [카카오 비즈 메시지](result-code/kakao-biz.md)
+  * [RCS](result-code/rcs.md)
