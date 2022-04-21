@@ -1,16 +1,13 @@
 # Table of contents
 
-* [UFIT DBRO 소개](README.md)
-* [사전 준비](prepare.md)
+* [Agent 소개](README.md)
 
-## DBRO 설치
+## AGENT 구성
 
-* [DBRO install](dbro/dbro-install.md)
-* [DBRO Configuration](dbro/dbro-configuration.md)
-
-## 참고사항
-
-* [Table Schema](undefined/table-schema.md)
+* [사전 준비](agent/prepare.md)
+* [DBRO install](agent/dbro-install.md)
+* [DBRO Configuration](agent/dbro-configuration.md)
+* [Table Schema](agent/table-schema.md)
 
 ***
 
