@@ -12,7 +12,7 @@ description: 설치 및 구동 방법
 2. 환경 설정 파일을 수정합니다. _**`{모듈경로}/config/dbro.conf`**_
    1. 계정 설정 : \
       GW\_CONNECT\_IP __ **(사업팀 확인 후 설정 ex. ena.ufit.co.kr)**\
-      __GW\_CONNECT_PORT **(SSL : 4005)**_\
+      __GW\_CONNECT_PORT **(SSL : 4006)**_\
       __USE\_SSL **(SSL : Y, NON-SSL 미지원)**
    2. DBMS 연결 정보 설정 : **DB\_TYPE, DB\_URL, DB\_USER, DB\_PASS**
 
