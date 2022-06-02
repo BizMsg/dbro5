@@ -44,6 +44,72 @@ DBRO 의 설정파일(dbro.conf)은 config 폴더에 존재하며, 설정에 따
 
 
 
-```apacheconf
+```tsconfig
+######################################################################################
+# DBRO v5 Config File - 2021.06.07
+######################################################################################
+
+######################################################################################
+# G/W CONNECT INFO
+# SSL Port     : 4006
+# Not Supported NON-SSL Port
+######################################################################################
+GW_CONNECT_IP =
+GW_CONNECT_PORT = 4006
+GW_AUTH_ID =
+GW_AUTH_PW =
+USE_SSL = Y
+######################################################################################
+
+######################################################################################
+# DBMS CONNECT INFO
+# DBTYPE
+#	MSSQL, MYSQL, ORACLE, INFORMIX, DB2, TIBERO
+# DBURL
+#   MSSQL           
+#	 jdbc:microsoft:sqlserver://<host>:<port,1433>;DatabaseName=<db>
+#   MYSQL           
+#	 jdbc:mysql://<host>:<port,3306>/<db>?useUnicode=true&characterEncoding=euc-kr
+#   ORACLE          
+#	 jdbc:oracle:thin:@<host>:<port,1521>:<db>
+#   INFORMIX
+#	 jdbc:informix-sqli://<host>:<port>/<db>:informixserver=<server>
+#   DB2
+#        jdbc:db2://<host>:<port,50000>/<db>
+#   TIBERO
+#       jdbc:tibero:thin:@<host>:<port,8629>:<db>
+######################################################################################
+DB_TYPE =
+DB_URL  =
+DB_USER =
+DB_PASS =
+MSG_TABLE = EM_TRAN
+BACKUP_TABLE = EM_LOG
+MMS_CONTENTS_TABLE = EM_TRAN_MMS
+KKO_CONTENTS_TABLE = EM_TRAN_KKO
+RCS_CONTENTS_TABLE = EM_TRAN_RCS
+
+USE_ORACLE_PREPARED_STATEMENT = Y
+######################################################################################
+
+######################################################################################
+# FILE PATH INFO
+LOG_PATH = ./log
+BLACKLIST_PATH = ./blk
+REPORT_PATH = ./rep
+######################################################################################
+
+######################################################################################
+# LOG LEVEL
+######################################################################################
+MAIN_LOG_LEVEL = INFO
+FETCH_LOG_LEVEL = INFO
+SEND_LOG_LEVEL = INFO
+RECV_LOG_LEVEL = INFO
+REPORT_LOG_LEVEL = INFO
+REORDER_LOG_LEVEL = INFO
+BACKUP_LOG_LEVEL = INFO
+
+
 ```
 
