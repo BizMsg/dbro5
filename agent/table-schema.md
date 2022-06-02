@@ -58,56 +58,56 @@ DBRO에서 사용하는 테이블의 목록은 다음과 같습니다.
 
 ### EM\_TRAN\_MMS
 
-|       컬럼 명      |  데이터 타입 |  길이  | 입력 필수 |  PK | NOT NULL |             비고            |   |
-| :-------------: | :-----: | :--: | :---: | :-: | :------: | :-----------------------: | - |
-|     MMS\_SEQ    | INTEGER |      |   O   |  O  |     O    |   메시지 키 (AUTO INCREMENT)  |   |
-|    FILE\_CNT    | INTEGER |      |   O   |     |     O    | MMS 전송 시 첨부파일 개수 (1 개 이상) |   |
-|    BUILD\_YN    |   CHAR  |   1  |       |     |          |                           |   |
-|    MMS\_BODY    | VARCHAR | 2000 |       |     |          |           본문 내용           |   |
-|   MMS\_SUBJECT  | VARCHAR |  40  |   O   |     |          |           메시지 제목          |   |
-|   FILE\_TYPE1   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |   |
-|   FILE\_TYPE2   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |   |
-|   FILE\_TYPE3   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |   |
-|   FILE\_TYPE4   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |   |
-|   FILE\_TYPE5   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |   |
-|   FILE\_NAME1   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |   |
-|   FILE\_NAME2   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |   |
-|   FILE\_NAME3   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |   |
-|   FILE\_NAME4   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |   |
-|   FILE\_NAME5   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |   |
-|  SERVICE\_DEP1  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |   |
-|  SERVICE\_DEP2  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |   |
-|  SERVICE\_DEP3  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |   |
-|  SERVICE\_DEP4  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |   |
-|  SERVICE\_DEP5  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |   |
-| SKN\_FILE\_NAME | VARCHAR |  255 |       |     |          |                           |   |
+|       컬럼 명      |  데이터 타입 |  길이  | 입력 필수 |  PK | NOT NULL |             비고            |
+| :-------------: | :-----: | :--: | :---: | :-: | :------: | :-----------------------: |
+|     MMS\_SEQ    | INTEGER |      |   O   |  O  |     O    |   메시지 키 (AUTO INCREMENT)  |
+|    FILE\_CNT    | INTEGER |      |   O   |     |     O    | MMS 전송 시 첨부파일 개수 (1 개 이상) |
+|    BUILD\_YN    |   CHAR  |   1  |       |     |          |                           |
+|    MMS\_BODY    | VARCHAR | 2000 |       |     |          |           본문 내용           |
+|   MMS\_SUBJECT  | VARCHAR |  40  |   O   |     |          |           메시지 제목          |
+|   FILE\_TYPE1   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |
+|   FILE\_TYPE2   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |
+|   FILE\_TYPE3   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |
+|   FILE\_TYPE4   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |
+|   FILE\_TYPE5   | VARCHAR |   3  |       |     |          |       MMS 파일타입 생략 가능      |
+|   FILE\_NAME1   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |
+|   FILE\_NAME2   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |
+|   FILE\_NAME3   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |
+|   FILE\_NAME4   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |
+|   FILE\_NAME5   | VARCHAR |  100 |       |     |          |   MMS 파일경로를 포함한 파일명 생략가능  |
+|  SERVICE\_DEP1  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |
+|  SERVICE\_DEP2  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |
+|  SERVICE\_DEP3  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |
+|  SERVICE\_DEP4  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |
+|  SERVICE\_DEP5  | VARCHAR |   3  |       |     |          |     MMS 파일 서비스통신사 생략가능    |
+| SKN\_FILE\_NAME | VARCHAR |  255 |       |     |          |                           |
 
 
 
 ### EM\_TRAN\_KKO
 
-|        컬럼 명       |  데이터 타입 |  길이  | 입력 필수 |  PK | NOT NULL |                       비고                      |   |
-| :---------------: | :-----: | :--: | :---: | :-: | :------: | :-------------------------------------------: | - |
-|      KKO\_SEQ     | INTEGER |      |   O   |  O  |     O    |             메시지 키 (AUTO INCREMENT)            |   |
-|     USER\_KEY     | VARCHAR |  30  |       |     |          |    <p>옐로아이디 봇을 이용해 받은<br>옐로아이디 사용자 식별키</p>    |   |
-|      AD\_FLAG     | VARCHAR |   1  |       |     |          |   <p>광고성 메시지 필수 표기 사항을 노출 <br>(노출여부 Y/N)</p>  |   |
-|    NATION\_CODE   | VARCHAR |   5  |   O   |     |          |                      국가코드                     |   |
-|    SENDER\_KEY    | VARCHAR |  40  |   O   |     |          |                    발신프로필 키                    |   |
-|   TEMPLATE\_CODE  | VARCHAR |  30  |   O   |     |          |                     템플릿코드                     |   |
-|  RESPONSE\_METHOD | VARCHAR |   8  |       |     |          |      <p>전송결과를 응답 받는 방법 <br>(기본: push)</p>     |   |
-|      TIMEOUT      | INTEGER |      |       |     |          |         메시지전송요청 시 성공여부를 결정하기 위한 시간(초)         |   |
-|      MESSAGE      | VARCHAR | 2000 |   O   |     |          |                     메시지본문                     |   |
-|      RE\_TYPE     | VARCHAR |   3  |       |     |          |                대체발송유형 (SMS/MMS)               |   |
-|      RE\_BODY     | VARCHAR | 2000 |       |     |          |                  대체발송 메시지 내용                  |   |
-|      RE\_PART     | VARCHAR |   1  |       |     |          | <p>대체발송 처리 주체<br>(C:클라이언트/S:게이트웨이/N:하지않음)</p> |   |
-|    RE\_SUBJECT    | VARCHAR |  40  |       |     |          |              MMS 대체발송인 경우, 메시지제목              |   |
-|    ORI\_MSGTYPE   | VARCHAR |   3  |       |     |          |      <p>원본 메시지 타입 <br>(AT:알림톡/FT:친구톡)</p>     |   |
-|    ORI\_MSGKEY    | INTEGER |      |       |     |          |                    원본메시지 키                    |   |
-| ATTACHED\_FILE\_1 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |   |
-| ATTACHED\_FILE\_2 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |   |
-| ATTACHED\_FILE\_3 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |   |
-| ATTACHED\_FILE\_4 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |   |
-| ATTACHED\_FILE\_5 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |   |
+|        컬럼 명       |  데이터 타입 |  길이  | 입력 필수 |  PK | NOT NULL |                       비고                      |     |
+| :---------------: | :-----: | :--: | :---: | :-: | :------: | :-------------------------------------------: | :-: |
+|      KKO\_SEQ     | INTEGER |      |   O   |  O  |     O    |             메시지 키 (AUTO INCREMENT)            |     |
+|     USER\_KEY     | VARCHAR |  30  |       |     |          |    <p>옐로아이디 봇을 이용해 받은<br>옐로아이디 사용자 식별키</p>    |     |
+|      AD\_FLAG     | VARCHAR |   1  |       |     |          |   <p>광고성 메시지 필수 표기 사항을 노출 <br>(노출여부 Y/N)</p>  |     |
+|    NATION\_CODE   | VARCHAR |   5  |   O   |     |          |                      국가코드                     |     |
+|    SENDER\_KEY    | VARCHAR |  40  |   O   |     |          |                    발신프로필 키                    |     |
+|   TEMPLATE\_CODE  | VARCHAR |  30  |   O   |     |          |                     템플릿코드                     |     |
+|  RESPONSE\_METHOD | VARCHAR |   8  |       |     |          |      <p>전송결과를 응답 받는 방법 <br>(기본: push)</p>     |     |
+|      TIMEOUT      | INTEGER |      |       |     |          |         메시지전송요청 시 성공여부를 결정하기 위한 시간(초)         |     |
+|      MESSAGE      | VARCHAR | 2000 |   O   |     |          |                     메시지본문                     |     |
+|      RE\_TYPE     | VARCHAR |   3  |       |     |          |                대체발송유형 (SMS/MMS)               |     |
+|      RE\_BODY     | VARCHAR | 2000 |       |     |          |                  대체발송 메시지 내용                  |     |
+|      RE\_PART     | VARCHAR |   1  |       |     |          | <p>대체발송 처리 주체<br>(C:클라이언트/S:게이트웨이/N:하지않음)</p> |     |
+|    RE\_SUBJECT    | VARCHAR |  40  |       |     |          |              MMS 대체발송인 경우, 메시지제목              |     |
+|    ORI\_MSGTYPE   | VARCHAR |   3  |       |     |          |      <p>원본 메시지 타입 <br>(AT:알림톡/FT:친구톡)</p>     |     |
+|    ORI\_MSGKEY    | INTEGER |      |       |     |          |                    원본메시지 키                    |     |
+| ATTACHED\_FILE\_1 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |     |
+| ATTACHED\_FILE\_2 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |     |
+| ATTACHED\_FILE\_3 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |     |
+| ATTACHED\_FILE\_4 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |     |
+| ATTACHED\_FILE\_5 | VARCHAR |  100 |       |     |          |                  첨부파일명(경로포함)                  |     |
 
 
 
