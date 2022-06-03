@@ -9,5 +9,5 @@ description: 발송쿼리
 ```sql
 INSERT INTO EM_TRAN
 (TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_MSG, TRAN_TYPE)
-VALUES (‘01000000000’, ‘01000000000’, ‘1’, NOW(), ‘Test Message 입니다’, 4)
+VALUES ('01000000000', '01000000000', '1', NOW(), 'Test Message 입니다', 4)
 ```
