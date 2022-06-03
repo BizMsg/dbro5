@@ -7,11 +7,11 @@ RCS는 사용 가능한 챗봇ID와 메시지베이스ID를 사용하여 발송�
 ```sql
 INSERT INTO EM_TRAN_RCS(
 CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY)
-VALUES ({챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”안녕하세요”}’);
+VALUES ({챗봇 ID}, 0, 'SS000000', '{"description":"안녕하세요"}');
 
 INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
-VALUES (‘01000000000’, ‘01000000000’, ‘1’, NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ 값});
+VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ 값});
 ```
 
 
@@ -72,8 +72,7 @@ URL 예시 – maapfile://BR.i6dOpSm8N8.20200302150000.001
 |    CMwShS0600   | MMS |     Carousel Small    |    6   |    2    |     1300 (총 합)     |
 
 > RCS MMS 슬라이드형(Carousel Medium, Small)은 1,300 자까지 발송 가능하나 \
-> 실제 단말에서 수신 가능한 글자 수가 적어 메시지 내용이 잘려 발송될 가능성이 존재합니다.
-
+> 실제 단말에서 수신 가능한 글자 수가 적어 메시지 내용이 잘려 발송될 수 있습니다.\
 > 포토여부/타이틀 글자 수/버튼 개수에 따라 입력 가능한 본문 글자 수가 상이할 수 있습니다.
 
 {% hint style="info" %}
@@ -198,11 +197,11 @@ RCS 에 버튼 링크를 추가하고자 할 경우 아래와 같은 JSON 형식
 ```sql
 INSERT INTO EM_TRAN_RCS(
 CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, BUTTONS)
-VALUES ({챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”안녕하세요”}’, ‘{버튼 예시 참조}’);
+VALUES ({챗봇 ID}, 0, 'SS000000', '{"description":"안녕하세요"}', '{버튼 예시 참조}');
 
 INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
-VALUES (‘01000000000’, ‘01000000000’, ‘1’, NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ 값});
+VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ 값});
 ```
 
 
@@ -222,7 +221,7 @@ RCS 는 전송결과에 대해 실패가 발생할 경우, 대체발송이 가�
 INSERT INTO EM_TRAN_RCS(
 CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, RE_TYPE, RE_BODY)
 VALUES (
-{챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”RCS+SMS 대체발송”}’ 'SMS', '대체발송');
+{챗봇 ID}, 0, 'SS000000', '{"description":"RCS+SMS 대체발송"}' 'SMS', '대체발송');
 
 INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
@@ -238,8 +237,8 @@ VALUES (
 INSERT INTO EM_TRAN_KKO(
 CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, RE_TYPE, RE_BODY) 
 VALUES (
-{챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”RCS+MMS 대체발송”}’,
-'MMS', '대체발송', ‘D:/spool/mms.jpg’); 
+{챗봇 ID}, 0, 'SS000000', '{"description":"RCS+MMS 대체발송"}',
+'MMS', '대체발송', 'D:/spool/mms.jpg'); 
 
 INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
@@ -262,12 +261,12 @@ RCS 는 전송결과에 대해 실패가 발생할 경우, 최대 2 차 대체�
 ```sql
 INSERT INTO EM_TRAN_RCS(
 RCS_SEQ, CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, RE_TYPE) 
-VALUES ({RCS_SEQ}, {챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”RCS 메시지”}’, 'K');
+VALUES ({RCS_SEQ}, {챗봇 ID}, 0, 'SS000000', '{"description":"RCS 메시지"}', 'K');
 
 INSERT INTO EM_TRAN_KKO(
 KKO_SEQ, SENDER_KEY, TEMPLATE_CODE, NATION_CODE, MESSAGE, RE_TYPE, RE_BODY) 
 VALUES ({RCS_SEQ 동일}, {발신 프로필 키}, {템플릿 코드}, '82', 'RCS+AT+SMS 대체발송',
-'SMS’, ‘SMS 2 차 대체발송 메시지’); 
+'SMS', 'SMS 2 차 대체발송 메시지'); 
 
 INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
@@ -281,12 +280,12 @@ VALUES ('01000000000', '01000000000', '1', now(), 11, {EM_TRAN_RCS 의 RCS_SEQ})
 ```sql
 INSERT INTO EM_TRAN_RCS(
 RCS_SEQ, CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY, RE_TYPE) 
-VALUES ({RCS_SEQ}, {챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”RCS 메시지”}’, 'K');
+VALUES ({RCS_SEQ}, {챗봇 ID}, 0, 'SS000000', '{"description":"RCS 메시지"}', 'K');
 
 INSERT INTO EM_TRAN_KKO(
 KKO_SEQ, SENDER_KEY, TEMPLATE_CODE, NATION_CODE, MESSAGE, RE_TYPE, RE_BODY) 
 VALUES ({RCS_SEQ 동일}, {발신 프로필 키}, {템플릿 코드}, '82', 'RCS+AT+MMS 대체발송',
-'MMS’, ‘MMS 2 차 대체발송 메시지’); 
+'MMS', 'MMS 2 차 대체발송 메시지'); 
 
 INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)

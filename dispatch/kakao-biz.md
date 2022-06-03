@@ -587,14 +587,14 @@ VALUES ('01000000000', '01000000000', '1', now(), 7, {EM_TRAN_KKO 의 KKO_SEQ});
 ```sql
 INSERT INTO EM_TRAN_KKO(
 KKO_SEQ, SENDER_KEY, TEMPLATE_CODE, NATION_CODE, MESSAGE, RE_TYPE) 
-VALUES ({KKO_SEQ}, {발신 프로필 키}, {템플릿 코드}, '82', 'AT 메시지', 'R’);
+VALUES ({KKO_SEQ}, {발신 프로필 키}, {템플릿 코드}, '82', 'AT 메시지', 'R');
 
 INSERT INTO EM_TRAN_RCS(
 RCS_SEQ, CHATBOT_ID, HEADER, MESSAGEBASE_ID, RCS_BODY,
 RE_TYPE, RE_BODY, ATTACHED_FILE_1)
 VALUES (
-{KKO_SEQ 동일}, {챗봇 ID}, 0, ‘SS000000’, ‘{“description”:”AT+RCS+SMS 대체발송”}’, 
-'SMS', ‘SMS 2 차 대체발송 메시지’, ‘D:/mms.jpg’);
+{KKO_SEQ 동일}, {챗봇 ID}, 0, 'SS000000', '{“description":"AT+RCS+MMS 대체발송"}', 
+'SMS', 'SMS 2 차 대체발송 메시지', 'D:/mms.jpg');
 
 INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
