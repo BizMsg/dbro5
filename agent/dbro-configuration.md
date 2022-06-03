@@ -30,8 +30,8 @@ DBRO의 설정파일(dbro.conf)은 config 폴더에 존재하며, 설정에 따�
 
 \[비밀번호 설정 값 수정 방법]
 
-* **dbro**.**confx** **->** **dbro**.**conf**로 변경
-* dbro.conf 파일 내 암호 관련 옵션 (GW\_AUTH\_PW, DB\_PASS) 모두 수정
+* dbro.confx -> <mark style="color:purple;">**dbro**</mark><mark style="color:purple;">.</mark><mark style="color:purple;">**conf**</mark>로 변경
+* dbro.conf 파일 내 암호 관련 옵션 (<mark style="color:purple;">**GW\_AUTH\_PW, DB\_PASS**</mark>) 모두 수정
 {% endhint %}
 
 
