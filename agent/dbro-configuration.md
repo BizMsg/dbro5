@@ -13,19 +13,26 @@
 * script : Linux/Unix용 실행 스크립트 위치
 
 {% hint style="info" %}
-blk, req, log 의 경우, 기본 상대경로 위치를 사용할 경우, Windows 의 경우 bat/wrapper, Linux/Unix 의 경우 config 와 같은 레벨에 존재.
+blk, req, log 경로 (기본 상대경로 위치 사용 시)
+
+* Windows:  bat/wrapper 하위 경로에 위치
+* Linux/Unix: config 와 동일 레벨에 위
 {% endhint %}
 
 
 
 ### 환경설정 파일
 
-DBRO 의 설정파일(dbro.conf)은 config 폴더에 존재하며, 설정에 따라 동작됩니다.
+DBRO의 설정파일(dbro.conf)은 config 폴더에 존재하며, 설정에 따라 동작됩니다.
 
-> 클라이언트 실행 후에는 **uds.confx** 로 파일명이 변경됨
->
-> * 비즈뿌리오 비밀번호나 DB 비밀번호를 수정해야 할 때 .**confx** **->** .**conf**로 변경한 뒤 수정
-> * 암호화 된 비밀번호 삭제 후 재 작성
+{% hint style="info" %}
+최초 설정 후 클라이언트 실행 시 dbro.conf -> **dbro.confx** 로 파일명이 변경됨
+
+\[비밀번호 설정 값 수정 방법]
+
+* **dbro**.**confx** **->** **dbro**.**conf**로 변경
+* dbro.conf 파일 내 암호 관련 옵션 (GW\_AUTH\_PW, DB\_PASS) 모두 수정
+{% endhint %}
 
 
 
@@ -40,9 +47,10 @@ DBRO 의 설정파일(dbro.conf)은 config 폴더에 존재하며, 설정에 따
 |  버전 명 |     추가 기능    |                                                                       설명                                                                      |
 | :---: | :----------: | :-------------------------------------------------------------------------------------------------------------------------------------------: |
 | 5.6.3 | RCS 발송 기능 추가 | <p>1. Config/Data/*.cfg 파일 교체 필요<br>2. 설정파일 옵션 변경/추가 (dbro.conf)</p><p>- 접속 Port 변경 : 4005 -> 4006<br>- RCS 테이블 명 추가 : RCS_CONTENTS_TABLE</p> |
-|       |              |                                                                                                                                               |
 
 
+
+### Configuration 작성
 
 ```tsconfig
 ######################################################################################
