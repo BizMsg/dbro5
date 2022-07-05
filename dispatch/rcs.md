@@ -1,8 +1,8 @@
 # RCS
 
-RCS는 사용 가능한 챗봇ID와 메시지베이스ID를 사용하여 발송되며 RCS 지원기기 사용자인 경우 발송 가능합니다.&#x20;
+RCS는 사용 가능한 챗봇ID와 메시지베이스ID를 사용하여 발송되며 RCS 지원기기 사용자인 경우 발송 가능합니다.
 
-메시지베이스 ID 는 이통사에서 제공하는 **메시지 포맷**을 사용하거나 **\[RCS 비즈센터]**을 통해 **템플릿**을 등록하여 사용가능합니다.
+메시지베이스 ID 는 이통사에서 제공하는 **메시지 포맷**을 사용하거나 **\*\[RCS 비즈센터]**을 통해 **템플릿**을 등록하여 사용가능합니다.
 
 ```sql
 INSERT INTO EM_TRAN_RCS(
@@ -13,8 +13,6 @@ INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
 VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ 값});
 ```
-
-
 
 ### RCS 공통포맷 (MESSAGEBASE\_ID)
 
@@ -33,7 +31,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 |    CMwShS0500   | MMS |    Carousel Small    |    5   |    2    |     1300 (총 합)     |
 |    CMwShS0600   | MMS |    Carousel Small    |    6   |    2    |     1300 (총 합)     |
 
-****
+***
 
 ### RCS BODY
 
@@ -67,11 +65,9 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 }
 ```
 
-
-
 **media 종류**
 
-**1. 이미지**&#x20;
+**1. 이미지**
 
 * 비즈뿌리오 사이트 \[메시지관리] - \[RCS 관리] - \[RCS 이미지 관리] 에서 이미지를 등록하여 사용합니다.
 
@@ -81,7 +77,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 "media":"maapfile://BR.i6dOpSm8N8.20200302150000.001"
 {% endhint %}
 
-#### 2. 동영상 스트리밍&#x20;
+#### 2. 동영상 스트리밍
 
 * 3가지 형태의 YouTube URL 주소 지원 (정확한 형식을 준수해야 하며, 일부만 일치하는 경우 실패)
 *   동영상 썸네일은 등록된 이미지만 사용 가능하며 YouTube URL 뒤에 콤마(,)와 함께 입력
@@ -99,7 +95,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 "media3":"https://m.youtube.com/watch?v=\[videoId],maapfile://BR.i6dOpSm8N8.20200302150000.001"
 {% endhint %}
 
-> RCS MMS 슬라이드형(Carousel Medium, Small)은 1,300 자까지 발송 가능하나 \
+> RCS MMS 슬라이드형(Carousel Medium, Small)은 1,300 자까지 발송 가능하나\
 > 실제 단말에서 수신 가능한 글자 수가 적어 메시지 내용이 잘려 발송될 수 있습니다.\
 > 포토여부/타이틀 글자 수/버튼 개수에 따라 입력 가능한 본문 글자 수가 상이할 수 있습니다.
 
@@ -129,8 +125,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | 타이틀 1줄 + description |   27  |   25  |   23  |   20  |
 | 타이틀 2줄 + description |   26  |   23  |   21  |   19  |
 
-
-
 **MMS (Standalone Media Top - 세로형)**
 
 글자 수
@@ -138,8 +132,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | title | description | button name |
 | :---: | :---------: | :---------: |
 |   16  |      18     |      17     |
-
-
 
 줄 수 (Media Tall 인 경우, 접혀있는 경우)
 
@@ -149,8 +141,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | 타이틀 1줄 + description |   8   |   6   |   4   |
 | 타이틀 2줄 + description |   7   |   5   |   3   |
 
-
-
 줄 수 (Media Medium 인 경우, 접혀있는 경우)
 
 |                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
@@ -159,8 +149,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | 타이틀 1줄 + description |   14  |   12  |   10  |
 | 타이틀 2줄 + description |   13  |   11  |   9   |
 
-
-
 **MMS (Carousel Medium - 슬라이드 형)**
 
 글자 수
@@ -168,8 +156,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | title | description | button name |
 | :---: | :---------: | :---------: |
 |   13  |      14     |      13     |
-
-
 
 줄 수 (Media 없는 경우, RCS A2P 단말 기준)
 
@@ -180,9 +166,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | 타이틀 2줄 + description |   26  |   23  |   21  |
 | 타이틀 3줄 + description |   24  |   22  |   20  |
 
-
-
-줄 수 (Media Medium  경우, RCS A2P 단말 기준)
+줄 수 (Media Medium 경우, RCS A2P 단말 기준)
 
 |                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
 | -------------------- | :---: | :---: | :---: |
@@ -190,8 +174,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | 타이틀 1줄 + description |   16  |   14  |   12  |
 | 타이틀 2줄 + description |   15  |   13  |   11  |
 | 타이틀 3줄 + description |   14  |   12  |   10  |
-
-
 
 **MMS (Carousel Medium - 슬라이드 형)**
 
@@ -201,11 +183,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | :---: | :---------: | :---------: |
 |   5   |      6      |      5      |
 
-
-
 줄 수 (Media Short 인 경우, RCS A2P 단말 기준)
-
-
 
 |                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
 | -------------------- | :---: | :---: | :---: |
@@ -215,8 +193,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | 타이틀 3줄 + description |   17  |   15  |   13  |
 | 타이틀 4줄 + description |   16  |   14  |   12  |
 | 타이틀 5줄 + description |   15  |   13  |   11  |
-
-
 
 ### RCS + BUTTONS
 
@@ -232,16 +208,12 @@ TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
 VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ 값});
 ```
 
-
-
 ### RCS + 1차 대체 발송
 
 RCS 는 전송결과에 대해 실패가 발생할 경우, 대체발송이 가능합니다.
 
-단, 해당 서비스 아이디에 대해 대체발송 가능여부와 주체에 대한 설정이 되어있어야 합니다. \
+단, 해당 서비스 아이디에 대해 대체발송 가능여부와 주체에 대한 설정이 되어있어야 합니다.\
 대체발송의 경우, EM\_TRAN 테이블에 해당 레코드가 추가로 생성되며 SMS 의 TRAN\_TYPE 은 1 이고 MMS 의 TRAN\_TYPE 은 2 이며, TRAN\_ETC4 에 입력된 값이 실제 원본데이터의 TRAN\_PR 입니다.
-
-
 
 #### **RCS+SMS**
 
@@ -257,8 +229,6 @@ VALUES (
 '01000000000', '01000000000', '1', now(), 11, {EM_TRAN_RCS 의 RCS_SEQ});
 ```
 
-
-
 **RCS + MMS**
 
 ```sql
@@ -273,16 +243,12 @@ TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
 VALUES ('01000000000', '01000000000', '1', now(), 11, {EM_TRAN_RCS 의 RCS_SEQ});
 ```
 
-
-
 ### RCS + 1차 + 2차 대체발송
 
 RCS 는 전송결과에 대해 실패가 발생할 경우, 최대 2 차 대체발송이 가능합니다. - 대체발송의 경우, EM\_TRAN 테이블에 해당 레코드가 추가로 됩니다.
 
 * 발송에 사용되는 RCS\_SEQ 값과 KKO\_SEQ 값은 동일해야 합니다.
 * 2 차 대체(SMS/MMS)의 정보는 KKO 테이블에 입력해야 정상적으로 발송됩니다.
-
-
 
 **RCS + AT + SMS**
 
@@ -300,8 +266,6 @@ INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4) 
 VALUES ('01000000000', '01000000000', '1', now(), 11, {EM_TRAN_RCS 의 RCS_SEQ});
 ```
-
-
 
 **RCS + AT + MMS**
 
