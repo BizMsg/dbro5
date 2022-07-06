@@ -28,11 +28,11 @@ DBRO에서 사용하는 테이블의 목록은 다음과 같습니다.
 
 ### EM\_TRAN
 
-![](<../.gitbook/assets/image (13).png>)
+![](<../.gitbook/assets/image (14).png>)
 
 ### EM\_TRAN\_MMS
 
-![](<../.gitbook/assets/image (16).png>)
+![](<../.gitbook/assets/image (17).png>)
 
 ### EM\_TRAN\_KKO
 

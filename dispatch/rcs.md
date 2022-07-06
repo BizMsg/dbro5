@@ -16,22 +16,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 ### RCS 공통포맷 (MESSAGEBASE\_ID)
 
-| MESSAGEBASE\_ID |  상품 |        메시지 타입        | 카드 장 수 | 최대 버튼 수 | 메시지 최대 본문 길이 (글자수) |
-| :-------------: | :-: | :------------------: | :----: | :-----: | :----------------: |
-|     SS000000    | SMS |      Standalone      |    1   |    1    |         100        |
-|     SL000000    | LMS |      Standalone      |    1   |    3    |        1300        |
-|     SMwThT00    | MMS | Standalone Media Top |    1   |    2    |        1300        |
-|     SMwThM00    | MMS | Standalone Media Top |    1   |    2    |        1300        |
-|    CMwMhM0300   | MMS |    Carousel Medium   |    3   |    2    |     1300 (총 합)     |
-|    CMwMhM0400   | MMS |    Carousel Medium   |    4   |    2    |     1300 (총 합)     |
-|    CMwMhM0500   | MMS |    Carousel Medium   |    5   |    2    |     1300 (총 합)     |
-|    CMwMhM0600   | MMS |    Carousel Medium   |    6   |    2    |     1300 (총 합)     |
-|    CMwShS0300   | MMS |    Carousel Small    |    3   |    2    |     1300 (총 합)     |
-|    CMwShS0400   | MMS |    Carousel Small    |    4   |    2    |     1300 (총 합)     |
-|    CMwShS0500   | MMS |    Carousel Small    |    5   |    2    |     1300 (총 합)     |
-|    CMwShS0600   | MMS |    Carousel Small    |    6   |    2    |     1300 (총 합)     |
-
-***
+![](<../.gitbook/assets/image (10).png>)
 
 ### RCS BODY
 
@@ -107,8 +92,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 (라인) 수 : expand 없이 메시지 버블 최대크기에서 표현 가능한 description 줄 수
 {% endhint %}
 
-**----------------------------------------------------------------------------------------------------**
-
 **LMS (Standalone No Media)**
 
 글자 수
@@ -117,7 +100,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 | :---: | :---------: | :---------: |
 |   16  |      18     |      17     |
 
-줄 수 (접혀있는 경)
+줄 수 (접혀있는 경우)
 
 |                      | 버튼 0개 | 버튼 1개 | 버튼 2개 | 버튼 3개 |
 | :------------------: | :---: | :---: | :---: | :---: |

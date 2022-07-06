@@ -64,7 +64,7 @@ VALUES (
 
 ### ATTACHMENT FIELDS
 
-![](<../.gitbook/assets/image (17).png>)
+![](<../.gitbook/assets/image (18).png>)
 
 ```json5
 {   
@@ -194,7 +194,7 @@ VALUES (
 
 **버튼 타입 별 속성**
 
-![](<../.gitbook/assets/image (12).png>)
+![](<../.gitbook/assets/image (13).png>)
 
 ### **AT + 바로연결**
 
