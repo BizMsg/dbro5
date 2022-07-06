@@ -15,11 +15,9 @@
 {% hint style="info" %}
 blk, req, log 경로 (기본 상대경로 위치 사용 시)
 
-* Windows:  bat/wrapper 하위 경로에 위치
+* Windows: bat/wrapper 하위 경로에 위치
 * Linux/Unix: config 와 동일 레벨에 위
 {% endhint %}
-
-
 
 ### 환경설정 파일
 
@@ -34,8 +32,6 @@ DBRO의 설정파일(dbro.conf)은 config 폴더에 존재하며, 설정에 따�
 * dbro.conf 파일 내 암호 관련 옵션 (<mark style="color:purple;">**GW\_AUTH\_PW, DB\_PASS**</mark>) 모두 수정
 {% endhint %}
 
-
-
 ### 모듈 버전 업그레이드
 
 최신 모듈을 사용하려는 기존 모듈 사용자가 환경설정을 유지하고자 할 때 참고해야 할 사항을 표기합니다.
@@ -45,8 +41,6 @@ DBRO의 설정파일(dbro.conf)은 config 폴더에 존재하며, 설정에 따�
 |  버전 명 |     추가 기능    |                                                                       설명                                                                      |
 | :---: | :----------: | :-------------------------------------------------------------------------------------------------------------------------------------------: |
 | 5.6.3 | RCS 발송 기능 추가 | <p>1. Config/Data/*.cfg 파일 교체 필요<br>2. 설정파일 옵션 변경/추가 (dbro.conf)</p><p>- 접속 Port 변경 : 4005 -> 4006<br>- RCS 테이블 명 추가 : RCS_CONTENTS_TABLE</p> |
-
-
 
 ### Configuration 작성
 
@@ -116,6 +110,4 @@ REPORT_LOG_LEVEL = INFO
 REORDER_LOG_LEVEL = INFO
 BACKUP_LOG_LEVEL = INFO
 
-
 ```
-
