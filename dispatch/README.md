@@ -40,4 +40,4 @@ AT/FT/RCS 타입에 한하여 설정에 의하여 대체발송이 이루어진 �
 
 ### 카카오 비즈 메시지 대체 발송 타입
 
-![](<../.gitbook/assets/image (11).png>)
+![](<../.gitbook/assets/image (15).png>)
