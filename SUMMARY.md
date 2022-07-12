@@ -14,7 +14,7 @@
 * [메시지 발송](dispatch/README.md)
   * [SMS](dispatch/sms.md)
   * [MMS](dispatch/mms.md)
-  * [카카오 비즈 메시지](dispatch/kakao-biz.md)
+  * [카카오톡 비즈메시지](dispatch/kakao-biz.md)
   * [RCS](dispatch/rcs.md)
   * [대체 발송 시나리오](dispatch/cases.md)
 * [발송 결과 코드](result-code/README.md)
