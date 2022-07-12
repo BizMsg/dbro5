@@ -134,7 +134,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 글자 수
 
-![](<../.gitbook/assets/image (18).png>)
+![](<../.gitbook/assets/image (19).png>)
 
 줄 수 (Media Short 인 경우, RCS A2P 단말 기준)
 

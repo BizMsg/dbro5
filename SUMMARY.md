@@ -22,3 +22,4 @@
   * [SMS/MMS](result-code/sms-mms.md)
   * [카카오 비즈 메시지](result-code/kakao-biz.md)
   * [RCS](result-code/rcs.md)
+* [개정 이력](revision-history.md)
