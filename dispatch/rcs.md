@@ -96,86 +96,49 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 글자 수
 
-| title | description | button name |
-| :---: | :---------: | :---------: |
-|   16  |      18     |      17     |
+![](<../.gitbook/assets/image (17).png>)
 
 줄 수 (접혀있는 경우)
 
-|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 | 버튼 3개 |
-| :------------------: | :---: | :---: | :---: | :---: |
-|   description only   |   28  |   26  |   24  |   22  |
-| 타이틀 1줄 + description |   27  |   25  |   23  |   20  |
-| 타이틀 2줄 + description |   26  |   23  |   21  |   19  |
+![](<../.gitbook/assets/image (4).png>)
 
 **MMS (Standalone Media Top - 세로형)**
 
 글자 수
 
-| title | description | button name |
-| :---: | :---------: | :---------: |
-|   16  |      18     |      17     |
+![](<../.gitbook/assets/image (5).png>)
 
 줄 수 (Media Tall 인 경우, 접혀있는 경우)
 
-|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
-| :------------------: | :---: | :---: | :---: |
-|   description only   |   9   |   8   |   6   |
-| 타이틀 1줄 + description |   8   |   6   |   4   |
-| 타이틀 2줄 + description |   7   |   5   |   3   |
+![](<../.gitbook/assets/image (16).png>)
 
 줄 수 (Media Medium 인 경우, 접혀있는 경우)
 
-|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
-| :------------------: | :---: | :---: | :---: |
-|   description only   |   15  |   13  |   11  |
-| 타이틀 1줄 + description |   14  |   12  |   10  |
-| 타이틀 2줄 + description |   13  |   11  |   9   |
+![](<../.gitbook/assets/image (9).png>)
 
 **MMS (Carousel Medium - 슬라이드 형)**
 
 글자 수
 
-| title | description | button name |
-| :---: | :---------: | :---------: |
-|   13  |      14     |      13     |
+![](<../.gitbook/assets/image (15).png>)
 
 줄 수 (Media 없는 경우, RCS A2P 단말 기준)
 
-|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
-| :------------------: | :---: | :---: | :---: |
-|   description only   |   28  |   26  |   23  |
-| 타이틀 1줄 + description |   27  |   25  |   23  |
-| 타이틀 2줄 + description |   26  |   23  |   21  |
-| 타이틀 3줄 + description |   24  |   22  |   20  |
+![](<../.gitbook/assets/image (11).png>)
 
 줄 수 (Media Medium 경우, RCS A2P 단말 기준)
 
-|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
-| :------------------: | :---: | :---: | :---: |
-|   description only   |   17  |   15  |   13  |
-| 타이틀 1줄 + description |   16  |   14  |   12  |
-| 타이틀 2줄 + description |   15  |   13  |   11  |
-| 타이틀 3줄 + description |   14  |   12  |   10  |
+![](<../.gitbook/assets/image (8).png>)
 
 **MMS (Carousel Medium - 슬라이드 형)**
 
 글자 수
 
-| title | description | button name |
-| :---: | :---------: | :---------: |
-|   5   |      6      |      5      |
+![](<../.gitbook/assets/image (18).png>)
 
 줄 수 (Media Short 인 경우, RCS A2P 단말 기준)
 
-|                      | 버튼 0개 | 버튼 1개 | 버튼 2개 |
-| :------------------: | :---: | :---: | :---: |
-|   description only   |   20  |   18  |   16  |
-| 타이틀 1줄 + description |   19  |   17  |   15  |
-| 타이틀 2줄 + description |   18  |   16  |   14  |
-| 타이틀 3줄 + description |   17  |   15  |   13  |
-| 타이틀 4줄 + description |   16  |   14  |   12  |
-| 타이틀 5줄 + description |   15  |   13  |   11  |
+![](<../.gitbook/assets/image (12).png>)
 
 ### RCS + BUTTONS
 

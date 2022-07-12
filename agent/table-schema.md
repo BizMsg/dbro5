@@ -32,7 +32,7 @@ DBRO에서 사용하는 테이블의 목록은 다음과 같습니다.
 
 ### EM\_TRAN\_MMS
 
-![](<../.gitbook/assets/image (17).png>)
+![](<../.gitbook/assets/image (17) (1).png>)
 
 ### EM\_TRAN\_KKO
 

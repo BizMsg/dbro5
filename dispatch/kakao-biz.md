@@ -1,4 +1,4 @@
-# 카카오 비즈 메시지
+# 카카오톡 비즈메시지
 
 ### AT 발송
 
@@ -64,7 +64,7 @@ VALUES (
 
 ### ATTACHMENT FIELDS
 
-![](<../.gitbook/assets/image (18).png>)
+![](<../.gitbook/assets/image (18) (1).png>)
 
 ```json5
 {   
@@ -170,7 +170,7 @@ VALUES (
 
 **Supplement**
 
-![](<../.gitbook/assets/image (9).png>)
+![](<../.gitbook/assets/image (9) (1).png>)
 
 ### AT/FT + BUTTON
 
