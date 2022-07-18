@@ -102,20 +102,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 ![](<../.gitbook/assets/image (4).png>)
 
-**MMS (Standalone Media Top - 세로형)**
-
-글자 수
-
-![](<../.gitbook/assets/image (5).png>)
-
-줄 수 (Media Tall 인 경우, 접혀있는 경우)
-
-![](<../.gitbook/assets/image (16).png>)
-
-줄 수 (Media Medium 인 경우, 접혀있는 경우)
-
-![](<../.gitbook/assets/image (9).png>)
-
 **MMS (Carousel Medium - 슬라이드 형)**
 
 글자 수
