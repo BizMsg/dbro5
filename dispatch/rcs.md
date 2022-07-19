@@ -50,35 +50,49 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 }
 ```
 
-**media 종류**
+### Media 종류
 
-**1. 이미지**
+**이미지**
 
-* 비즈뿌리오 사이트 \[메시지관리] - \[RCS 관리] - \[RCS 이미지 관리] 에서 이미지를 등록하여 사용합니다.
+*   비즈뿌리오 사이트의 \[메시지관리] – \[RCS 관리] – \[RCS 이미지 관리] 메뉴에서 이미지를 등록하여 사용합니다.
 
-{% hint style="info" %}
-**URL 예시 ( maapfile://{fileId} )**
+    이미지는 등록일로부터 365일간 발송 가능합니다. (이후 자동 삭제)
 
-"media":"maapfile://BR.i6dOpSm8N8.20200302150000.001"
-{% endhint %}
+> **이미지 URL**
+>
+> **포맷**&#x20;
+>
+> maapfile://{fileId}
+>
+> &#x20;
+>
+> **예시**&#x20;
+>
+> "media" : "maapfile://BR.i6dOpSm8N8.20200302150000.001"
 
-#### 2. 동영상 스트리밍
 
-* 3가지 형태의 YouTube URL 주소 지원 (정확한 형식을 준수해야 하며, 일부만 일치하는 경우 실패)
-*   동영상 썸네일은 등록된 이미지만 사용 가능하며 YouTube URL 뒤에 콤마(,)와 함께 입력
 
-    (콤마(,) 외 공백을 포함하는 경우 실패)
-* 동영상 발송 시 Footer에 '동영상 재생 시 데이터 요금제가 적용됩니다.'라는 문구 자동 삽입
+**동영상 스트리밍**
 
-{% hint style="info" %}
-**URL 예시 ( https://youtu.be/\[VideoId],maapfile://{썸네일용 fileId} )**
+> **동영상 스트리밍 URL**
+>
+> **포맷**&#x20;
+>
+> https://www.youtube.com/watch?v=\[videoId],maapfile://{썸네일용 fileId\_1}
+>
+> https://youtu.be/\[VideoId],maapfile://{썸네일용 fileId\_2}
+>
+> https://m.youtube.com/watch?v=\[videoId],maapfile://{썸네일용 fileId\_3}
+>
+> &#x20;
+>
+> **예시**&#x20;
+>
+> "media1" : "https://www.youtube.com/watch?v=KCbtF9I0qvI,maapfile://BR.i6dOpSm8N8.20200302150000.001"
 
-"media1":"https://www.youtube.com/watch?v=\[videoId],maapfile://BR.i6dOpSm8N8.20200302150000.001"
 
-"media2":"https://youtu.be/\[VideoId],maapfile://BR.i6dOpSm8N8.20200302150000.001"
 
-"media3":"https://m.youtube.com/watch?v=\[videoId],maapfile://BR.i6dOpSm8N8.20200302150000.001"
-{% endhint %}
+****
 
 > RCS MMS 슬라이드형(Carousel Medium, Small)은 1,300 자까지 발송 가능하나\
 > 실제 단말에서 수신 가능한 글자 수가 적어 메시지 내용이 잘려 발송될 수 있습니다.\
@@ -91,16 +105,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 (라인) 수 : expand 없이 메시지 버블 최대크기에서 표현 가능한 description 줄 수
 {% endhint %}
-
-**LMS (Standalone No Media)**
-
-글자 수
-
-![](<../.gitbook/assets/image (17).png>)
-
-줄 수 (접혀있는 경우)
-
-![](<../.gitbook/assets/image (4).png>)
 
 **MMS (Carousel Medium - 슬라이드 형)**
 
