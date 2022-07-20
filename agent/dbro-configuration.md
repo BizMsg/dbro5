@@ -52,13 +52,15 @@ DBRO의 설정파일(dbro.conf)은 config 폴더에 존재하며, 설정에 따�
 
 RESELLER\_CODE 는 특부가사업자 등록번호(9 자리 숫자로 구성)를 의미합니다.&#x20;
 
-1. USE\_RESELLERCODE (Y/N) 옵션 설정\
+1. USE\_RESELLERCODE (ON/OFF) 옵션 설정\
    메시지 발송시 식별코드를 포함하여 전송합니다.\
    \- config/dbro.conf 파일 내에 다음과 같이 설정하여 사용합니다.\
    "USE\_RESELLERCODE = Y" - 기본값(DEFAULT): N
 2. 메시지/로그 테이블 RESELLER\_CODE VARCHAR(10) 컬럼 추가\
    \- 신규 설치시 위 옵션을 설정 후 구동하면 자동으로 추가됩니다.\
    \- 기존 테이블(EM\_TRAN/EM\_LOG)이 존재한다면 테이블 삭제 후 모듈을 재구동하거나 해당 컬럼을 추가하여 발송 가능합니다.
+
+![](../.gitbook/assets/midkyle1216@daou.co.kr\_inline\_img\_95C066A549784EECB5E74A6870113159.png)
 
 ### Configuration 작성
 
