@@ -81,6 +81,40 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
  }
 ```
 
+###
+
+{% hint style="info" %}
+글자 수 및 라인 수 정의
+
+글자 수 : 1 줄 당 정상적으로 표현가능한 글자 수, 한글 '가' 기준 측정 줄
+
+(라인) 수 : expand 없이 메시지 버블 최대크기에서 표현 가능한 description 줄 수
+{% endhint %}
+
+**MMS (Carousel Medium - 슬라이드 형)**
+
+글자 수
+
+![](<../.gitbook/assets/image (15).png>)
+
+줄 수 (Media 없는 경우, RCS A2P 단말 기준)
+
+![](<../.gitbook/assets/image (11).png>)
+
+줄 수 (Media Medium 경우, RCS A2P 단말 기준)
+
+![](<../.gitbook/assets/image (8).png>)
+
+**MMS (Carousel Medium - 슬라이드 형)**
+
+글자 수
+
+![](<../.gitbook/assets/image (19) (1).png>)
+
+줄 수 (Media Short 인 경우, RCS A2P 단말 기준)
+
+![](<../.gitbook/assets/image (12).png>)
+
 ### Media 종류
 
 **이미지**
@@ -128,38 +162,6 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 > RCS MMS 슬라이드형(Carousel Medium, Small)은 1,300 자까지 발송 가능하나\
 > 실제 단말에서 수신 가능한 글자 수가 적어 메시지 내용이 잘려 발송될 수 있습니다.\
 > 포토여부/타이틀 글자 수/버튼 개수에 따라 입력 가능한 본문 글자 수가 상이할 수 있습니다.
-
-{% hint style="info" %}
-글자 수 및 라인 수 정의
-
-글자 수 : 1 줄 당 정상적으로 표현가능한 글자 수, 한글 '가' 기준 측정 줄
-
-(라인) 수 : expand 없이 메시지 버블 최대크기에서 표현 가능한 description 줄 수
-{% endhint %}
-
-**MMS (Carousel Medium - 슬라이드 형)**
-
-글자 수
-
-![](<../.gitbook/assets/image (15).png>)
-
-줄 수 (Media 없는 경우, RCS A2P 단말 기준)
-
-![](<../.gitbook/assets/image (11).png>)
-
-줄 수 (Media Medium 경우, RCS A2P 단말 기준)
-
-![](<../.gitbook/assets/image (8).png>)
-
-**MMS (Carousel Medium - 슬라이드 형)**
-
-글자 수
-
-![](<../.gitbook/assets/image (19) (1).png>)
-
-줄 수 (Media Short 인 경우, RCS A2P 단말 기준)
-
-![](<../.gitbook/assets/image (12).png>)
 
 ### RCS + BUTTONS
 
