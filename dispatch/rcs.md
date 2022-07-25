@@ -50,6 +50,37 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 }
 ```
 
+**신규 RCS 포맷**
+
+```json5
+"body": {
+    "title1": "제목",
+    "description1": "본문 텍스트",
+    "media1": "maapfile://{fileId_1}",
+    "title2": "제목 2번째 카드",
+    "description2": "본문 텍스트",
+    "media2": "maapfile://{fileId_2}",
+    "title3": "제목 3번째 카드",
+    "description3": "본문 텍스트",
+    "media3": "maapfile://{fileId_3}",
+    "media": "maapfile://{fileId_main}      > (신규포맷 mms 전용) 상단 main 이미지",
+    "title": "제목 텍스트                   > (신규포맷 mms 전용) 상단 main 제목",
+    "description": "본문 텍스트             > (신규포맷 mms 전용) 상단 main 본문",
+    "subMedia1": "maapfile://{fileId_sub1}  > (신규포맷 mms 전용) 선택 옵션 서브 이미지 1",
+    "subMediaUrl1": "URL                    > (신규포맷 mms 전용) 선택 옵션 서브 이미지 1 클릭 시 랜딩 URL",
+    "subTitle1": "제목 텍스트               > (신규포맷 mms 전용) 선택 옵션 소제목 1",
+    "subDesc1": "본문 텍스트                > (신규포맷 mms 전용) 선택 옵션 소본문 1",
+    "subMedia2": "maapfile://{fileId_sub2}  > (신규포맷 mms 전용) 선택 옵션 서브 이미지 2",
+    "subMediaUrl2": "URL                    > (신규포맷 mms 전용) 선택 옵션 서브 이미지 2 클릭 시 랜딩 URL",
+    "subTitle2": "제목 텍스트               > (신규포맷 mms 전용) 선택 옵션 소제목 2",
+    "subDesc2": "본문 텍스트                > (신규포맷 mms 전용) 선택 옵션 소본문 2",
+    "subMedia3": "maapfile://{fileId_sub3}  > (신규포맷 mms 전용) 선택 옵션 서브 이미지 3",
+    "subMediaUrl3": "URL                    > (신규포맷 mms 전용) 선택 옵션 서브 이미지 3 클릭 시 랜딩 URL",
+    "subTitle3": "제목 텍스트               > (신규포맷 mms 전용) 선택 옵션 소제목 3",
+    "subDesc3": "본문 텍스트                > (신규포맷 mms 전용) 선택 옵션 소본문 3"
+ }
+```
+
 ### Media 종류
 
 **이미지**
