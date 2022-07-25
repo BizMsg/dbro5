@@ -16,7 +16,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 ### RCS 공통포맷 (MESSAGEBASE\_ID)
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (6).png>)
 
 ### RCS BODY
 
