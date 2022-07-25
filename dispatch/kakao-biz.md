@@ -190,7 +190,7 @@ VALUES (
 
 **버튼 타입**
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7) (1).png>)
 
 **버튼 타입 별 속성**
 
@@ -207,7 +207,7 @@ VALUES (
 
 **AT + 바로연결 타입별 속성**
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)
 
 **바로연결 첨부파일 예시**
 
