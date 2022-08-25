@@ -438,3 +438,17 @@ INSERT INTO EM_TRAN(
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
 VALUES ('01000000000', '01000000000', '1', now(), 7, {EM_TRAN_KKO 의 KKO_SEQ});
 ```
+
+
+
+### 카카오톡 이모티콘 삽입
+
+카카오톡 기본 이모티콘 삽입을 원할 경우 이모티콘에 해당하는 명령어를 입력합니다.
+
+예) 안녕하세요 (하하)(씨익)
+
+<figure><img src="../.gitbook/assets/카카오톡 이모티콘 이름 (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+카카오에서 공식적으로 지원하는 기능이 아니므로 명령어에 대한 변경이 있을 수 있습니다.
+{% endhint %}
