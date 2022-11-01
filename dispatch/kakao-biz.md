@@ -207,7 +207,7 @@ VALUES (
 
 **AT + 바로연결 타입별 속성**
 
-![](<../.gitbook/assets/image (1) (1).png>)
+![](<../.gitbook/assets/image (1) (1) (2).png>)
 
 **바로연결 첨부파일 예시**
 
