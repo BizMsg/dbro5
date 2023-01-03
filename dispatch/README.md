@@ -41,3 +41,8 @@ AT/FT/RCS 타입에 한하여 설정에 의하여 대체발송이 이루어진 �
 ### 카카오 비즈 메시지 대체 발송 타입
 
 ![](<../.gitbook/assets/image (15) (1).png>)
+
+{% hint style="warning" %}
+LMS 대체발송의 경우에도 MMS로 Type을 기재하여야 합니다.
+{% endhint %}
+
