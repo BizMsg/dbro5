@@ -16,7 +16,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 ### RCS 공통포맷 (MESSAGEBASE\_ID)
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 > **RCS MMS 슬라이드형(Carousel Medium, Small)은 1,300자까지 발송 가능하나 실제 단말에서 수신 가능한 글자 수가 적어 메시지 내용이 잘려 발송될 수 있습니다.**
 >
@@ -28,7 +28,35 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 >
 > 라인 수 : 수신 가능한 디스크립션(본문) 줄 수
 
-**Carousel Medium**
+****
+
+**LMS (Standalone No Media)**
+
+\[글자 수]
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+\[줄 수(접혀있는 경우)]
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+**MMS (Standalone Media Top - 세로형)**
+
+\[글자 수]
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+\[줄 수(Media Tall인 경우, 접혀있는 경우)]
+
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
+\[줄 수(Media Medium인 경우, 접혀있는 경우)]
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+
+
+**MMS (Carousel Medium - 슬라이드)**
 
 ![](<../.gitbook/assets/image (19).png>)
 
@@ -38,7 +66,7 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 ![](<../.gitbook/assets/image (1) (1).png>)
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7) (2).png>)
 
 ### RCS BODY
 

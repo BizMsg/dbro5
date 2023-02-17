@@ -36,7 +36,7 @@ DBRO에서 사용하는 테이블의 목록은 다음과 같습니다.
 
 ### EM\_TRAN\_KKO
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (3) (1).png>)
 
 ### EM\_TRAN\_RCS
 
