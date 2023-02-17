@@ -62,7 +62,9 @@ VALUES ('01000000000', '01000000000', '1', NOW(), 11, {EM_TRAN_RCS 의 RCS_SEQ �
 
 ![](<../.gitbook/assets/image (10).png>)
 
-**Carousel Small**
+**MMS (Carousel Small - 슬라이드형)**
+
+
 
 ![](<../.gitbook/assets/image (1) (1).png>)
 
