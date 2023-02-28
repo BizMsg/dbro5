@@ -40,4 +40,4 @@ DBRO에서 사용하는 테이블의 목록은 다음과 같습니다.
 
 ### EM\_TRAN\_RCS
 
-![](<../.gitbook/assets/image (6) (1).png>)
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
