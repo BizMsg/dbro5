@@ -52,9 +52,9 @@ VALUES (
 
 ```sql
 INSERT INTO EM_TRAN_KKO(
-SENDER_KEY, TEMPLATE_CODE, NATION_CODE, MESSAGE, ATTACHED_FILE_1)
+SENDER_KEY, NATION_CODE, MESSAGE, ATTACHED_FILE_1)
 VALUES (
-{발신 프로필 키}, {템플릿 코드}, '82', 'AT 테스트입니다', ‘D:/spool/add_info.json’); 
+{발신 프로필 키}, '82', 'AT 테스트입니다', ‘D:/spool/add_info.json’); 
 
 INSERT INTO EM_TRAN( 
 TRAN_PHONE, TRAN_CALLBACK, TRAN_STATUS, TRAN_DATE, TRAN_TYPE, TRAN_ETC4)
@@ -247,7 +247,7 @@ VALUES (
 
 **add\_info2.json**
 
-버튼이 있고, **** 알림톡 바로연결 (웹링크/봇키워드/메시지전달/상담톡전환)이 있는 템플릿의 경우
+버튼이 있고, 알림톡 바로연결 (웹링크/봇키워드/메시지전달/상담톡전환)이 있는 템플릿의 경우
 
 ```json5
 {
